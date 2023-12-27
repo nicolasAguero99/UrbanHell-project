@@ -14,7 +14,7 @@ const BANNER_SRC_ARRAY = [
   { src: './imgs/banners/banner-vintage.jpg', idProduct: 15 },
 ];
 
-if (LOCATION_URL == "/tienda-ropa-final-pwa/") {
+if (LOCATION_URL == "/tienda-ropa-final-pwa/" || LOCATION_URL == "/UrbanHell-project/") {
   window.location.href = "./index.html";
 }
 
@@ -644,7 +644,7 @@ async function getProducts() {
   const response = await fetch("./data/ropa.json");
   const data = await response.json();
   productsArray = data;
-  if (LOCATION_URL.includes('index.html') || LOCATION_URL == '/') { 
+  if (LOCATION_URL.includes('index.html') || LOCATION_URL == '/' || LOCATION_URL == '/UrbanHell-project/') { 
     popularArticlesCarrousel();
     topMonthCarrousel();
     discountArticlesCarrousel();

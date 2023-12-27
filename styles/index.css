@@ -502,6 +502,7 @@ Product
   font-weight: 600;
   color: var(--primary);
   transition: background-color .3s ease-out;
+  cursor: pointer;
 }
 
 .header-product .container-dots-sizes .span-sizes.span-size-active {
@@ -517,6 +518,7 @@ Product
   height: 35px;
   outline: 2px solid transparent;
   transition: outline .3s ease-out;
+  cursor: pointer;
 }
 
 .header-product .container-dots-colors span.span-color-active {
@@ -812,6 +814,10 @@ Cards catalogo
   margin: auto;
   text-align: center;
   margin-top: 120px;
+}
+
+.favorite-btn {
+  cursor: pointer;
 }
 
 .header-favoritos > h1 {
