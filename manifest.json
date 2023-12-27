@@ -1,0 +1,23 @@
+{
+  "author": "Nicolás Agüero",
+  "description": "Final PWA - Escuela Da Vinci",
+  "name": "Urban Hell",
+  "dir": "ltr",
+  "orientation": "any",
+  "scope": "/",
+  "start_url": "index.html",
+  "theme_color": "#355070",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "16x16",
+      "type": "image/png",
+      "src": "./imgs/icons/urban-hell-logo-16.png"
+    },
+    {
+      "sizes": "144x144",
+      "type": "image/png",
+      "src": "./imgs/icons/urban-hell-logo-144.png"
+    }
+  ]
+}

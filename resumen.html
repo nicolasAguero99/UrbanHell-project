@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Ropa - Resumen</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="shortcut icon" href="./imgs/icons/urban-hell-logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <div class='nav-top-container'>
+    <img class='logo-nav-top' src="./imgs/icons/urban-hell-logo.svg" alt="urban hell logo">
+    <ul class='container-nav-items-top'>
+      <li>
+        <a href="./index.html">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="./catalogo.html">
+          Catálogo
+        </a>
+      </li>
+      <li>
+        <a href="./favoritos.html">
+          Favoritos
+        </a>
+      </li>
+      <li>
+        <a href="./compras.html">
+          Compras
+        </a>
+      </li>
+      <li>
+        <button id='open-cart-btn' type="button">
+          <img src="./imgs/icons/carrito-icon.svg" alt="abrir carrito">
+          <span class='cart-qty'></span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div style="display: none;" id='container-cart'>
+    <button id='close-cart-btn' type='button'>
+      <img src="./imgs/icons/cruz-icon.svg" alt="cerrar carrito">
+    </button>
+    <div id='container-btns-cart'>
+      <button id='btn-clear-cart' type='button'>Borrar todo</button>
+      <a href="./resumen.html" id='btn-pay-cart' type='button'>Pagar</a>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="./index.html">
+          <img src="./imgs/icons/casa-icon.svg" alt="ir a inicio">
+        </a>
+      </li>
+      <li>
+        <a href="./catalogo.html">
+          <img src="./imgs/icons/bolsa-icon.svg" alt="ir a catalogo">
+        </a>
+      </li>
+      <li>
+        <a href="./favoritos.html">
+          <img src="./imgs/icons/corazon-icon.svg" alt="ir a favoritos">
+        </a>
+      </li>
+      <li>
+        <a href="./compras.html">
+          <img src="./imgs/icons/tarjeta-icon.svg" alt="ir a compras">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class='header-resumen'>
+    <div>
+      <h1>Solo queda un paso</h1>
+      <h2>Por favor, completa el siguiente formulario</h2>
+    </div>
+    <form id='form-resumen'>
+      <div>
+        <input id="name-input" type="text" placeholder='Ingrese su nombre' required>
+        <input id="surname-input" type="text" placeholder='Ingrese su apellido' required>
+      </div>
+      <input id="email-input" type="email" placeholder='Ingrese su email' required>
+      <input id="location-input" type="text" placeholder='Ingrese su dirección' required>
+      <input id="date-input" type="date" required>
+      <select id="select-method-payment">
+        <option selected value="cash-payment">Efectivo</option>
+        <option value="card-payment">Tarjeta de débito/crédito</option>
+      </select>
+      <input style='display: none;' id="card-input" type="number" placeholder='xxxx-xxxx-xxxx-xxxx' required>
+      <input style='display: none;' id="cvv-input" type="number" placeholder='Código de seguridad' required>
+      <div class='container-btns-payment'>
+        <a href='./catalogo.html' id='return-payment'>Volver</a>
+        <button id='accept-payment'>Aceptar</button>
+      </div>
+      <div style='display: none;' class='error-alert-form'>
+        <p>Completa todos los campos, por favor</p>
+      </div>
+    </form>
+  </header>
+
+  <div style='display: none;' id='background-summary-alert'></div>
+  <div style='display: none;' id='summary-alert'>
+    <div class='container-alert-info'>
+      <h3>¡Hola <b></b>!</h3>
+      <p>Tu compra llegará a <b></b>, el <span></span>.</p>
+    </div>
+    <div class='container-products-payment'>
+    </div>
+    <div class='container-btns-alert-payment'>
+      <button id='return-alert-payment'>Volver</button>
+      <button id='accept-alert-payment'>Aceptar</button>
+    </div>
+  </div>
+
+  <div style='display: none;' class='offline-alert'>
+    <img src="./imgs/icons/offline-icon.svg" alt="sin conexión">
+  </div>
+
+  <div style='display: none;' class='online-alert'>
+    <img src="./imgs/icons/online-icon.svg" alt="con conexión">
+  </div>
+
+  <script src='./index.js'></script>
+
+</body>
+
+</html>

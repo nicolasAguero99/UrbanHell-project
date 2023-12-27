@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Ropa</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="shortcut icon" href="./imgs/icons/urban-hell-logo.ico" type="image/x-icon">
+  
+  <!-- Manifiesto -->
+  <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+
+  <div class='nav-top-container'>
+    <img class='logo-nav-top' src="./imgs/icons/urban-hell-logo.svg" alt="urban hell logo">
+    <ul class='container-nav-items-top'>
+      <li class='active'>
+        <a href="./index.html">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="./catalogo.html">
+          Catálogo
+        </a>
+      </li>
+      <li>
+        <a href="./favoritos.html">
+          Favoritos
+        </a>
+      </li>
+      <li>
+        <a href="./compras.html">
+          Compras
+        </a>
+      </li>
+      <li>
+        <button id='open-cart-btn' type="button">
+          <img src="./imgs/icons/carrito-icon.svg" alt="abrir carrito">
+          <span class='cart-qty'></span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div style="display: none;" id='container-cart'>
+    <button id='close-cart-btn' type='button'>
+      <img src="./imgs/icons/cruz-icon.svg" alt="cerrar carrito">
+    </button>
+    <div id='container-btns-cart'>
+      <button id='btn-clear-cart' type='button'>Borrar todo</button>
+      <a href="./resumen.html" id='btn-pay-cart' type='button'>Pagar</a>
+    </div>
+  </div>
+
+
+  <nav>
+    <ul>
+      <li>
+        <a href="./index.html">
+          <img src="./imgs/icons/casa-icon.svg" alt="ir a inicio">
+        </a>
+        <div class='nav-mobile-active'></div>
+      </li>
+      <li>
+        <a href="./catalogo.html">
+          <img src="./imgs/icons/bolsa-icon.svg" alt="ir a catalogo">
+        </a>
+      </li>
+      <li>
+        <a href="./favoritos.html">
+          <img src="./imgs/icons/corazon-icon.svg" alt="ir a favoritos">
+        </a>
+      </li>
+      <li>
+        <a href="./compras.html">
+          <img src="./imgs/icons/tarjeta-icon.svg" alt="ir a compras">
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <header class='header'>
+    <div class='container-header-titles'>
+      <h1>Urban Hell</h1>
+      <h2>La calidad, estilo y personalidad en un solo lugar.</h2>
+    </div>
+    <img src="./imgs/banners/banner-header.jpg" alt="banner principal">
+    <img src="./imgs/banners/banner-header-mobile.jpg" alt="banner principal">
+  </header>
+
+  <main class='main'>
+    <section class='section'>
+      <h2>Artículos populares</h2>
+      <div id='popular-articles-carrousel' class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+      </div>
+    </section>
+
+    <section class='section'>
+      <h2>Top del mes</h2>
+      <div id='top-month-carrousel' class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+      </div>
+    </section>
+
+    <section class='section'>
+      <h2>Artículos en oferta</h2>
+      <div id='discount-articles-carrousel' class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class='container-notifications-btn'>
+    <button class='close-notifications-btn'><img src="./imgs/icons/cruz-icon.svg" alt="cerrar boton notificaciones"></button>
+    <button class='notifications-btn'><img src="./imgs/icons/campana-icon.svg" alt="permitir notificaciones"></button>
+  </div>
+
+  <div style='display: none;' class='offline-alert'>
+    <img src="./imgs/icons/offline-icon.svg" alt="sin conexión">
+  </div>
+
+<div style='display: none;' class='online-alert'>
+    <img src="./imgs/icons/online-icon.svg" alt="con conexión">
+  </div>
+
+  <script src='./index.js'></script>
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+  <!-- Initialize Swiper -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        grabCursor: true,
+      })
+    })
+  </script>
+
+
+</body>
+</html>
